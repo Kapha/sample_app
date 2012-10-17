@@ -266,3 +266,17 @@ aside {
     margin-bottom: 5px;
   }
 }
+
+/* Alerts */
+
+.alert-success {
+  background-color: #5F6B61;
+  border-color: white;
+  color: white;
+}
+
+.alert-error {
+  background-color: pink;
+  border-color: #FFCBCB;
+  color: rgb(185, 0, 0)
+}

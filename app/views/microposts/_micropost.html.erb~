@@ -9,4 +9,9 @@
                                      data: { confirm: "Your post will be permenantly deleted. Are you sure?" },
                                      title: micropost.content %>
   <% end %>
+  <% if current_user.admin? %>
+    <%= link_to "delete", micropost, method: :delete,
+                                     data: { confirm: "Your post will be permenantly deleted. Are you sure?" },
+                                     title: micropost.content %>
+  <% end %>
 </li>
