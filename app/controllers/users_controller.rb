@@ -23,6 +23,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    @title = "Sign up"
   end
 
   def create
@@ -70,7 +71,6 @@ class UsersController < ApplicationController
 
   private
 
-
     def signed_in_user
       unless signed_in?
         store_location
@@ -87,4 +87,3 @@ class UsersController < ApplicationController
       redirect_to(root_path) unless current_user.admin?
     end
 end
-
