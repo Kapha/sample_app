@@ -174,7 +174,7 @@ end
     before { visit signup_path }
 
     it { should have_selector('h1',    text: 'Sign up') }
-    it { should have_selector('title', text: full_title('Sign up')) }
+    it { should have_selector('title', text: 'Sign up') }
   end
 
   describe "signup" do
@@ -202,7 +202,7 @@ end
         before { click_button submit }
         let(:user) { User.find_by_email('user@example.com') }
 
-        it { should have_selector('title', text: user.firstname) }
+        it { should have_selector('title', text: "Example") }
         it { should have_selector('div.alert.alert-success', text: 'Welcome') }
         it { should have_link('Sign out') }
       end
@@ -224,7 +224,7 @@ end
         visit following_user_path(user)
       end
 
-      it { should have_selector('title', text: full_title('Following')) }
+      it { should have_selector('title', text: 'Following') }
       it { should have_selector('h3', text: 'Following') }
       it { should have_link(other_user.firstname, href: user_path(other_user)) }
     end
@@ -235,7 +235,7 @@ end
         visit followers_user_path(other_user)
       end
 
-      it { should have_selector('title', text: full_title('Followers')) }
+      it { should have_selector('title', text: 'Followers') }
       it { should have_selector('h3', text: 'Followers') }
       it { should have_link(user.firstname, href: user_path(user)) }
     end
