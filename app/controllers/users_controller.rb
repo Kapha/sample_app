@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   before_filter :admin_user,     only: :destroy
 
   def admin
-    User.find(params[:id]).admin
+    @user = User.find(params[:id])
+    @user.toggle!(:admin)
     flash[:success] = "User promoted to Admin"
     redirect_to users_url
   end

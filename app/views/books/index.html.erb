@@ -1,0 +1,10 @@
+<% provide(:title, 'All Books') %>
+<h1>Books currently in the library.</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @books %>
+</ul>
+
+<%= will_paginate %>

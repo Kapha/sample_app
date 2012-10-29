@@ -98,8 +98,6 @@ describe "User pages" do
           sign_in admin
           visit users_path
         end
-
-      it { should have_link('admin') }
       end
       it { should_not have_link('admin') }
     end

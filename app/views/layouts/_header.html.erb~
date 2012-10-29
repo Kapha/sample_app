@@ -1,5 +1,5 @@
 <header class="navbar navbar-fixed-top">
-  <div class="navbar-inner" style="background-color: FF0000;">
+  <div class="navbar-inner" style="background-color:yellow">
     <div class="container">
       <%= link_to "U 31 Post Office", root_path, id: "logo" %>
       <nav>

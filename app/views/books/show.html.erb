@@ -1,0 +1,25 @@
+<% provide(:title, @book.title) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= @book.title %>,
+        <%= @book.author %>
+      </h1>
+    </section>
+    <section>
+    < if @book.reviews.any? %>
+      <h3>This book has been reveiwed <= @book.reviews.count %> time </h3>
+      
+    </section>
+  </aside>
+  <div class="span8">
+      <h3> <%= @book.description %> </h3>
+      <ol class="microposts">
+        <= render @reviews %>
+      </ol>
+      <= will_paginate @reviews %>
+    < end %> >
+  </div>
+</div>
+

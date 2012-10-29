@@ -10,6 +10,11 @@
     </section>
     <section>
       <%= render 'shared/stats' %>
+      <% if @user.admin? %>
+        <p> User is admin </p>
+      <% else %>
+        <p> User is not admin </p>
+      <% end %>
     </section>
   </aside>
   <div class="span8">
